@@ -1,0 +1,108 @@
+. <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>예쁜 계산기</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="calculator">
+		<div class="display">
+			<input type="text" id="input">
+		</div>
+		<div class="keys">
+			<button class="operator" id="add">+</button>
+			<button class="operator" id="subtract">-</button>
+			<button class="operator" id="multiply">*</button>
+			<button class="operator" id="divide">/</button>
+			<button id="seven">7</button>
+			<button id="eight">8</button>
+			<button id="nine">9</button>
+			<button id="four">4</button>
+			<button id="five">5</button>
+			<button id="six">6</button>
+			<button id="one">1</button>
+			<button id="two">2</button>
+			<button id="three">3</button>
+			<button id="zero">0</button>
+			<button id="decimal">.</button>
+			<button id="clear">C</button>
+			<button id="calculate">=</button>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+2. * {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f2f2f2;
+}
+
+.calculator {
+	width: 300px;
+	margin: 50px auto;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+	padding: 20px;
+	text-align: right;
+	border-bottom: 1px solid #ccc;
+}
+
+.display input[type="text"] {
+	font-size: 24px;
+	width: 100%;
+	padding: 10px;
+	border: none;
+	background-color: #fff;
+}
+
+.keys {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+	padding: 20px;
+}
+
+button {
+	font-size: 24px;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	background-color: #eee;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+button:hover {
+	background-color: #ccc;
+}
+
+.operator {
+	background-color: #f2a72c;
+	color: #fff;
+}
+
+#clear {
+	grid-column: span 2;
+	background-color: #f44336;
+	color: #fff;
+}
+
+#calculate {
+	background-color: #4caf50;
+	color: #fff;
+}
